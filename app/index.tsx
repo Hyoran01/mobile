@@ -1,10 +1,29 @@
 import { Text, View, StyleSheet } from "react-native";
 
+const dados = [
+  {
+    id: 1,
+    nome: "Hyoran",
+    cargo: "Monitor"
+  },
+  {
+    id:2,
+    nome: "Gabriel",
+    cargo: "Aluno"
+  }
+]
+
 export default function Index() {
   return (
     <View
      style={style.container} >
-      <Text>Olá</Text>
+    
+    {
+      dados.map(item => (
+          <Text>{item.nome}</Text>
+      ))
+    }
+
     </View>
   );
 }
